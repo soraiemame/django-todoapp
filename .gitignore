@@ -4,3 +4,5 @@ db.sqlite3
 venv
 tailwind-output.css
 .idea
+.DS_Store
+local_settings.py
