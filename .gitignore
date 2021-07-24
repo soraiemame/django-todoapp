@@ -6,3 +6,4 @@ tailwind-output.css
 .idea
 .DS_Store
 local_settings.py
+*.log
