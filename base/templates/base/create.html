@@ -1,0 +1,11 @@
+{% extends 'base/main.html' %}
+{% block content %}
+{% load crispy_forms_filters %}
+<div class="p-5">
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="bg-green-600 py-3 px-5 rounded text-lg m-2 text-blue-50">create</button>
+    </form>
+</div>
+{% endblock content %}

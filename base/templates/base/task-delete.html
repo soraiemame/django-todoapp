@@ -1,0 +1,15 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+    <div class="bg-blue-400 p-5 rounded flex">
+        <p><a href="{% url 'index' %}"><i class="fas fa-arrow-left fa-lg mr-3 text-black"></i></a>Go Back</p>
+    </div>
+    <div class="p-5 text-xl">
+        <form method="post">
+            {% csrf_token %}
+            <p class="m-3">Do you really want to delete the task?</p>
+            <p class="m-3">Task name: {{ task }}</p>
+            <button type="submit" class="bg-red-500 text-white px-5 py-3 rounded m-3">Yes</button>
+        </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends 'base/main.html' %}
+{% block content %}
+{% load tailwind_filters %}
+
+    <div class="bg-blue-400 p-5 rounded flex">
+        <p><a href="{% url 'index' %}"><i class="fas fa-arrow-left fa-lg mr-3 text-black"></i></a>Go Back</p>
+    </div>
+    <div class="p-5">
+        <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit" class="bg-blue-600 py-3 px-5 rounded text-lg m-2 text-yellow-50">create</button>
+        </form>
+    </div>
+{% endblock content %}
